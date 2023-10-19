@@ -10,6 +10,7 @@ const {
   userRouter,
   authRoutes,
   contentRoutes,
+  roleRouter,
 } = require("../v1/routes");
 app.use(cors());
 app.use(morgan("dev"));
@@ -23,5 +24,6 @@ app.use("/api/v1/topics", topicRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/contents", contentRoutes);
+app.use("/api/v1/roles", roleRouter);
 
 module.exports = app;
